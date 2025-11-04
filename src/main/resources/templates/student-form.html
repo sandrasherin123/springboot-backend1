@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student ComboBox</title>
+</head>
+<body>
+    <form>
+        <label for="studentSelect">Select Student:</label>
+        <select id="studentSelect" name="studentName">
+            <option value="">--Select--</option>
+            <option th:each="student : ${students}" 
+                    th:value="${student.name}" 
+                    th:text="${student.name}">
+            </option>
+        </select>
+    </form>
+</body>
+</html>
